@@ -1,0 +1,256 @@
+<!--
+Plan Summary:
+1. Introduction: Overview of the 11-day Canadian Rockies expedition.
+2. Core Metrics: KPIs showing total days, parks visited, and major natural landmarks.
+3. Activity Distribution: Visual progress bars using Tailwind CSS to show time allocation.
+4. Natural Wonders by Region: Interactive-looking grid cards showing counts of attractions.
+5. Logistics Status: A modern checklist UI with status badges.
+6. Route Timeline: Chronological flow of the journey from Vancouver to Calgary.
+
+Design Notes:
+- NO SVG used.
+- NO Mermaid JS used.
+- NO Chart.js used (Removed to prevent script errors).
+- Palette: "Glacial Forest" (Sky Blue, Emerald, Amber, Slate).
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedición Rocosas Canadienses 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+        .step-gradient {
+            background: linear-gradient(to right, #10b981, #0ea5e9);
+        }
+    </style>
+</head>
+<body class="text-slate-900 font-sans antialiased">
+
+    <header class="bg-slate-900 text-white py-16 px-6 border-b-8 border-sky-500">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">Expedición Rocosas Canadienses</h1>
+            <p class="text-xl md:text-2xl text-sky-200 font-light mb-6">Cascadas, Lagos y Glaciares</p>
+            <div class="flex flex-wrap gap-4 text-sm font-semibold uppercase tracking-wider">
+                <span class="bg-emerald-500 text-white px-4 py-2 rounded-full">26 Sept - 6 Oct, 2025</span>
+                <span class="bg-slate-700 text-slate-100 px-4 py-2 rounded-full">Vancouver ➔ Calgary</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6 md:p-10 space-y-16">
+
+        <!-- Sección: Introducción -->
+        <section id="intro">
+            <h2 class="text-3xl font-bold mb-4 text-slate-800 border-b-4 border-emerald-400 inline-block pb-1">Resumen de la Aventura</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-4xl">
+                Este itinerario de 11 días maximiza la exposición a los paisajes más asombrosos de Columbia Británica y Alberta. La ruta atraviesa 4 parques nacionales, enfocándose en la observación de cascadas imponentes, lagos turquesa y glaciares milenarios.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-2">🏔️</span>
+                    <span class="text-3xl font-black text-slate-800">11</span>
+                    <span class="text-sm text-slate-500 font-bold uppercase mt-1">Días de Viaje</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-2">💧</span>
+                    <span class="text-3xl font-black text-slate-800">8+</span>
+                    <span class="text-sm text-slate-500 font-bold uppercase mt-1">Lagos Glaciares</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-500 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-2">🌊</span>
+                    <span class="text-3xl font-black text-slate-800">5+</span>
+                    <span class="text-sm text-slate-500 font-bold uppercase mt-1">Cascadas Mayores</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-slate-800 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-2">🌲</span>
+                    <span class="text-3xl font-black text-slate-800">4</span>
+                    <span class="text-sm text-slate-500 font-bold uppercase mt-1">Parques Nacionales</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Distribución y Regiones (Reemplazo de Gráficos) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Distribución de Tiempo -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold mb-6 text-slate-800">Enfoque del Itinerario</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-bold text-slate-600 uppercase">
+                            <span>Senderismo y Naturaleza</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-4 rounded-full">
+                            <div class="bg-emerald-500 h-4 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-bold text-slate-600 uppercase">
+                            <span>Traslados y Conducción</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-4 rounded-full">
+                            <div class="bg-slate-400 h-4 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-bold text-slate-600 uppercase">
+                            <span>Miradores e Iconos</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-4 rounded-full">
+                            <div class="bg-sky-500 h-4 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-bold text-slate-600 uppercase">
+                            <span>Descanso y Gastronomía</span>
+                            <span>15%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-4 rounded-full">
+                            <div class="bg-amber-500 h-4 rounded-full" style="width: 15%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hitos por Región -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold mb-6 text-slate-800">Atractivos por Zona</h3>
+                <div class="grid grid-cols-1 gap-4 text-sm">
+                    <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold">Clearwater</span>
+                        <div class="flex gap-2">
+                            <span title="Cascadas" class="bg-sky-100 text-sky-700 px-2 py-1 rounded">🌊 3</span>
+                            <span title="Lagos" class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">💧 1</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold">Jasper</span>
+                        <div class="flex gap-2">
+                            <span title="Cascadas" class="bg-sky-100 text-sky-700 px-2 py-1 rounded">🌊 1</span>
+                            <span title="Lagos" class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">💧 2</span>
+                            <span title="Cañones" class="bg-slate-200 text-slate-700 px-2 py-1 rounded">🏔️ 2</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold">Icefields Parkway</span>
+                        <div class="flex gap-2">
+                            <span title="Glaciares" class="bg-sky-100 text-sky-700 px-2 py-1 rounded">❄️ 1</span>
+                            <span title="Lagos" class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">💧 2</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <span class="font-bold">Banff & Lake Louise</span>
+                        <div class="flex gap-2">
+                            <span title="Lagos" class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">💧 3</span>
+                            <span title="Góndolas" class="bg-amber-100 text-amber-700 px-2 py-1 rounded">🚠 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Sección: Logística (Checklist Visual) -->
+        <section id="logistics">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold mb-6 text-slate-800">Estado de Reservas Críticas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+                        <div class="text-2xl mr-4">✅</div>
+                        <div class="flex-1">
+                            <div class="font-bold text-emerald-900">Vehículo 4x4 One-Way</div>
+                            <div class="text-xs text-emerald-600 uppercase font-bold">Confirmado</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+                        <div class="text-2xl mr-4">✅</div>
+                        <div class="flex-1">
+                            <div class="font-bold text-emerald-900">Hospedajes Jasper & Canmore</div>
+                            <div class="text-xs text-emerald-600 uppercase font-bold">Confirmado</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+                        <div class="text-2xl mr-4">✅</div>
+                        <div class="flex-1">
+                            <div class="font-bold text-emerald-900">Cena Sky Bistro Banff</div>
+                            <div class="text-xs text-emerald-600 uppercase font-bold">Confirmado</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-amber-50 rounded-2xl border border-amber-100">
+                        <div class="text-2xl mr-4">⏳</div>
+                        <div class="flex-1">
+                            <div class="font-bold text-amber-900">Shuttle Moraine Lake</div>
+                            <div class="text-xs text-amber-600 uppercase font-bold">Pendiente (Apertura Abril)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Línea de Tiempo -->
+        <section id="timeline-flow" class="bg-slate-900 text-slate-100 p-8 md:p-12 rounded-3xl shadow-xl">
+            <h3 class="text-3xl font-bold mb-8 text-white border-b-2 border-slate-700 inline-block pb-2">Ruta de la Expedición</h3>
+            
+            <div class="relative border-l-4 border-emerald-500 ml-4 md:ml-8 space-y-12">
+                
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute w-6 h-6 bg-sky-500 rounded-full -left-[15px] top-1 border-4 border-slate-900 shadow-md"></div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <span class="text-sky-400 font-bold tracking-wider text-sm mb-1 block uppercase">Días 1-3 | El Reino de las Cascadas</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Wells Gray & Clearwater</h4>
+                        <p class="text-slate-300 text-sm italic">Helmcken Falls, Spahats y Dawson. El inicio salvaje de la aventura.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute w-6 h-6 bg-amber-500 rounded-full -left-[15px] top-1 border-4 border-slate-900 shadow-md"></div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <span class="text-amber-400 font-bold tracking-wider text-sm mb-1 block uppercase">Días 4-6 | Vida Silvestre & Maligne</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Jasper National Park</h4>
+                        <p class="text-slate-300 text-sm italic">Caminatas por cañones, crucero en Spirit Island y observación de osos y alces.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute w-6 h-6 bg-emerald-500 rounded-full -left-[15px] top-1 border-4 border-slate-900 shadow-md"></div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <span class="text-emerald-400 font-bold tracking-wider text-sm mb-1 block uppercase">Día 7 | La Carretera más Bella</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Icefields Parkway</h4>
+                        <p class="text-slate-300 text-sm italic">Glaciar Athabasca y el color imposible del Lago Peyto.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute w-6 h-6 bg-rose-500 rounded-full -left-[15px] top-1 border-4 border-slate-900 shadow-md"></div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <span class="text-rose-400 font-bold tracking-wider text-sm mb-1 block uppercase">Días 8-11 | Cumbres & Lagos Turquesa</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Banff, Yoho & Calgary</h4>
+                        <p class="text-slate-300 text-sm italic">Lake Louise, Moraine y el clímax otoñal en Larch Valley.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-100 border-t border-slate-200 mt-12 py-8 text-center text-slate-500 text-sm">
+        <p>Documento de planificación visual • Expedición Canadá 2025</p>
+        <p class="mt-2 text-xl space-x-2">
+            <span>🍁</span>
+            <span>🏔️</span>
+            <span>🚙</span>
+        </p>
+    </footer>
+
+</body>
+</html>
